@@ -2,13 +2,13 @@ import os
 
 flag_leer = False
 
-path = "Scout"
+path = "Scout/dvw"
 
 archivos = os.listdir(path)
 
 for archivo in archivos:
     ruta_archivo = os.path.join(path, archivo)
-    with open('CSV/'+archivo[:-4]+'.csv', "w") as archivo:
+    with open('Scout/csv/'+archivo[:-4]+'.csv', "w") as archivo:
         with open(ruta_archivo, encoding='latin1') as f:
             for line in f:
                 if '[3SCOUT]' in line:
